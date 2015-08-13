@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>area</title>
+    <style>
+      body {
+        width: 1000px;
+        margin: 0 auto;
+      }
+      textarea {
+        padding: 5px;
+        width: 100%;
+        height: 80px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <pre>
+	    area 标签定义图像映射中的区域（注：图像映射指得是带有可点击区域的图像）
+	    area一般定义在map元素内 图片热点
+	    
+<img src="planets.jpg" border="0" usemap="#planetmap" alt="Planets" />
+
+<map name="planetmap" id="planetmap">
+  <area shape="circle" coords="180,139,14" href ="venus.html" alt="Venus" />
+  <area shape="circle" coords="129,161,10" href ="mercur.html" alt="Mercury" />
+  <area shape="rect" coords="0,0,110,260" href ="sun.html" alt="Sun" />
+</map>	    
+	  </pre>
+    <pre>
+	    注意：<img> 中的 usemap 属性可引用 <map> 中的 id 或 name 属性（由浏览器决定），所以我们需要同时向 <map> 添加 id 和 name 两个属性
+	    
+	    area必须属性--alt  可选属性--coords ，href ， nohref ， shape ， target
+	    
+	    alt在图片无法显示时所指定的替代文本 
+	    
+	    coords 定义可点击区域（对鼠标敏感的区域）的坐标，与shape配合使用可以定义区域的尺寸、形状以及位置，左上角为‘0,0’
+	    
+	    圆形：shape="circle"，coords="x,y,r"
+	    多边形：shape="polygon"，coords="x1,y1,x2,y2,x3,y3,..."
+	    矩形：shape="rectangle"，coords="x1,y1,x2,y2"
+	    
+	    
+	    <textarea>
+x1,y1,x2,y2           如果 shape 属性设置为 "rect"，则该值规定矩形左上角和右下角的坐标。
+x,y,radius               如果 shape 属性设置为 "circ"，则该值规定圆心的坐标和半径。
+x1,y1,x2,y2,..,xn,yn  如果 shape 属性设置为 "poly"，则该值规定多边形各边的坐标。如果第一个坐标和最后一个坐标不一致，那么为了关闭多边形，浏览器必须添加最后一对坐标。
+ 
+	    </textarea>
+	    
+	    
+	  </pre>
+
+  </body>
+
+</html>

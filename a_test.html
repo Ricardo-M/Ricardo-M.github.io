@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>a标签测试</title>
+    <style>
+      body {
+        width: 1000px;
+        margin: 0 auto;
+      }
+      pre {
+        border: 1px dotted #FF0000;
+        padding: 5px;
+      }
+      textarea {
+        width: 500px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <pre>
+    a标签属性分析
+    a标签属于超文本链接标签，但是不使用 href 属性，则不可以使用属性：download, hreflang, media, rel, target 以及 type 这些属性
+  </pre>
+
+    <pre>
+    <a href="#">这种为常见跳转标签，在本页面覆盖跳转</a>
+    
+    target属性标签使用
+    
+    <a href="#" target="_blank">blank属性 浏览器总在一个新打开、未命名的窗口中载入目标文档</a>
+    <a href="#" target="_self">self属性  在本身页面打开，不利于用户体验</a>
+    <a href="#" target="_parent">parent属性  与self属性效果相同，多用于框架内部使用</a>
+    <a href="#" target="_top">top属性 在窗口打开页面，目标会清楚所有被包含框架</a>
+  </pre>
+    <pre>
+    download属性
+    <a href="#" download="#">点击下载</a>
+    
+    hreflang属性规定文档语言
+    <a href="http://www.w3school.com.cn" hreflang="zh">W3School</a>
+    
+    media属性用于规定被链接文档是为何种媒介/设备优化
+    <a href="#output=print" media="print and (resolution:300dpi)">打开用于打印的 media 属性页面</a>
+    
+    rel属性  定义链接页面与当前页面关系
+    <textarea>
+      <a href="#" rel="next" rev="prev">
+    </textarea>
+    
+    
+  </pre>
+
+  </body>
+
+</html>
