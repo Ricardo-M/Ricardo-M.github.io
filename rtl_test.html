@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>rtl与button</title>
+    <style>
+      body {
+        width: 1000px;
+        margin: 0 auto;
+      }
+      pre {
+        padding: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <pre>
+    bdo属性  rtl反向输出文本内容   ltr正向输出文本
+
+    <bdo dir="rtl">Here is some text</bdo>
+</pre>
+
+    <pre>
+    big标签 总是比周围文字大一号，只有在文字已经是最大号，才不起作用。不支持浏览器会认为是粗体标签。
+
+    <span>big<big>文本</big>解释段落</span>
+</pre>
+
+    <pre>
+    blockquote标签定义块引用，块文本会被分离出来，左右增加缩进
+
+   正常段落文本内容
+   <blockquote>
+   标签内部文本内容
+   </blockquote>
+   正常段落文本内容
+</pre>
+
+    <pre>
+      type类型
+      submit 提交按钮
+      button 可点击属性
+      reset  重置按钮--清除表单数据
+      
+      value 属性规定按钮关联初始值
+      
+  button标签
+  <button type="button">Click Me!</button>
+  
+  autofocus属性 加载按钮是自动获取焦点
+  <button type="button" autofocus="autofocus">点击这里</button>
+  
+  disabled属性 禁用按钮
+  <button type="button" disabled="disabled">Click Me!</button>
+  
+  form属性 规定按钮属于一个或多个表单，一般用于提交数据
+  <button type="submit" form="nameform" value="Submit">提交</button>
+  
+  formaction 属性 该属性会覆盖button外层form中得action属性
+  <form action="demo_form.asp" method="get">
+  First name: <input type="text" name="fname" />
+  Last name: <input type="text" name="lname" />
+  <button type="submit">提交</button>
+  <button type="submit" formaction="demo_admin.asp">以管理员身份提交</button>
+  </form>
+  
+  formnovalidate 属性 会覆盖表单的novalidate属性，不执行表单验证过程
+  <form action="demo_form.asp" method="get">
+  E-mail: <input type="email" name="userid" />
+  <button type="submit" >提交</button>
+  <button type="submit" formnovalidate="formnovalidate">进行没有验证的提交</button>
+  </form>
+  
+  
+</pre>
+
+  </body>
+
+</html>
