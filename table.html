@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>table相关属性</title>
+		<style>
+		  body{width: 800px;margin: 0 auto;}
+		  table.one{table-layout: automatic;}
+      table.two{table-layout: fixed;}
+		</style>
+	</head>
+	<body>
+<pre>
+table,th,td{border:1px solid blue;}
+这样设置表格会出现每个单元格都有线，会变成双边框线样式
+
+border-collapse 属性设置是否将表格边框折叠为单一边框
+table{border-collapse:collapse;}
+
+在表格中的文本可使用text-align和vertical-align属性设置表格中对齐方式
+
+border-spacing设置分隔单元格的距离（IE8以上版本支持属性）
+table{border-spacing: 10px;}
+
+border-side 设置表格标题位置
+table{border-side:top;}
+
+empty-cells 设置是否显示表格中得空单元格（IE8以上版本支持属性）
+table{empty-cells: hide;}
+
+table-layout 设置显示单元、行和列的算法
+<table class="one" border="1" width="100%">
+<tr>
+<td width="20%">1000000000000000000000000000</td>
+<td width="40%">10000000</td>
+<td width="40%">100</td>
+</tr>
+</table>
+
+<hr />
+
+<table class="two" border="1" width="100%">
+<tr>
+<td width="20%">1000000000000000000000000000</td>
+<td width="40%">10000000</td>
+<td width="40%">100</td>
+</tr>
+</table>
+</pre>
+	</body>
+</html>

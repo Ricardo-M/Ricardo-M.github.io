@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>background</title>
+    <style>
+      body{width: 800px;margin: 0 auto;}
+    </style>
+  </head>
+
+  <body>
+<pre>
+css 说明 
+background-image:url("图片的地址");
+background: url(" 图片的地址 ");
+background-color:#色码;
+
+示例: 
+background-image:url(images.jpg,gif,png);
+background-color:#FFFFFF; 
+background-color : transparent; 
+</pre>
+<hr />
+
+
+<pre>
+background-repeat 改变背景图片的重复并排的设定 
+
+css 说明 
+repeat 背景图片并排 
+repeat-x 背景图片以X方向 并排 
+repeat-y 背景图片以Y方向 并排 
+no-repeat 背景图片不 以并排的方式处理 
+
+示例: 
+background-image:url("images/xx.gif"); 
+background-repeat:no-repeat; 
+</pre>
+<hr />
+
+<pre>
+background-attachment是否固定图片位置 
+
+css 说明 
+scroll 拉动卷轴时，背景图片会跟着移动（缺省值） 
+fixed 拉动卷轴时，背景图片不会跟着移动 
+
+示例: 
+background-image:url("images/xx.gif"); 
+background-repeat:no-repeat; 
+background-attachment:fixed; 
+以images/xx.gif背景图片不重复并列，且不随卷轴移动 
+</pre>
+<hr />
+<pre>
+以长度定位background-position: x y 
+使用百分比定位 background-position: x% y% 
+
+css 说明 
+x% 往右移 
+y% 往下移 
+backgroud-position: 0% 0%; 左边上方
+backgroud-position: 0% 50%; 左边中间
+backgroud-position: 50% 0%; 中间上方
+backgroud-position: 50% 50%; 正中间
+backgroud-position:100% 0%; 右边上方
+backgroud-position: 0% 100%; 左边下方
+backgroud-position: 100% 50%; 右边中间
+backgroud-position: 50% 100%; 中间下方
+backgroud-position: 100% 100%; 右边下方
+</pre>
+<hr />
+<pre>
+以关键字定位 
+关键字 说明 
+top 上 ( y = 0 ) 
+center 中 ( x = 50, y = 50 ) 
+bottom 下 ( y = 100 ) 
+left 左 ( x= 0 ) 
+
+示例: 
+background-position:center; 
+图片在指定背景中央X=50% Y=50%位置 
+background-position: 200px 30px 
+</pre>	  
+	  
+  </body>
+
+</html>

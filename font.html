@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>font字体样式</title>
+		<style type="text/css">
+		body{width: 800px;margin: 0 auto;}
+      p.normal {font-variant: normal}
+      p.small {font-variant: small-caps}
+    </style>
+	</head>
+	<body>
+<pre>
+字体选择顺序
+font-family:'Microsoft Yahei', Times, TimesNR, 'New Century Schoolbook', Georgia, 'New York', serif;
+</pre>
+<pre>
+font-variant属性：小型号的字母大写反转
+<p class="normal">This is a paragraph</p>
+<p class="small">This is a paragraph</p>
+</pre>
+<pre>
+由于IE对元素字体大小字体调整排斥，所以考虑使用em代替设置字体大小
+<h1>常规计算方式为em:pixels/16=em</h1>
+<b>这种计算方式在body设置font-size:100%时生效</b>
+h1 {font-size:3.75em;} /* 60px/16=3.75em */
+h2 {font-size:2.5em;}  /* 40px/16=2.5em */
+p {font-size:0.875em;} /* 14px/16=0.875em */
+</pre>
+
+
+
+
+
+
+	</body>
+</html>
