@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS3多列属性</title>
+<style> 
+body{width: 800px;margin: 0 auto;}
+.newspaper{
+-moz-column-count:3; /* Firefox */
+-webkit-column-count:3; /* Safari and Chrome */
+column-count:3;
+-moz-column-gap:40px; /* Firefox */
+-webkit-column-gap:40px; /* Safari and Chrome */
+column-gap:40px;
+-moz-column-rule:4px outset #ff0000; /* Firefox */
+-webkit-column-rule:4px outset #ff0000; /* Safari and Chrome */
+column-rule:4px outset #ff0000;
+}
+</style>
+	</head>
+	<body>
+
+column-count      规定元素应该被分隔的列数。 
+column-fill       规定如何填充列。  
+column-gap        规定列之间的间隔。 
+column-rule       设置所有 column-rule-* 属性的简写属性。 
+column-rule-color 规定列之间规则的颜色。 
+column-rule-style 规定列之间规则的样式。 
+column-rule-width 规定列之间规则的宽度。 
+column-span       规定元素应该横跨的列数。  
+column-width      规定列的宽度。 
+columns           规定设置 column-width 和 column-count 的简写属性。
+
+
+<div class="newspaper">
+  此次国内成品油价格调整幅度，是按照现行国内成品油价格形成机制，根据国际市场油价变化情况确定的。去年11月16日国内成品油价格调整以来，受市场预期欧美经济复苏前景向好以及中东局势持续动荡等因素影响，国际市场原油价格先抑后扬，2月上旬WTI和布伦特原油期货价格再次回升至每桶95美元和115美元以上。虽然近两日价格有所回落，但国内油价挂钩的国际市场三种原油连续22个工作日移动平均价格上涨幅度已超过4%，达到国内成品油价格调整的边界条件。
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</body>
+</html>

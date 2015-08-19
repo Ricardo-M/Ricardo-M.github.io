@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>outline边框外围轮廓属性以及盒模型</title>
+<style type="text/css">
+body{width: 800px;margin: 0 auto;}
+p{border: red solid thin;}
+p.dotted {outline-style: dotted}
+p.dashed {outline-style: dashed}
+p.solid {outline-style: solid}
+p.double {outline-style: double}
+p.groove {outline-style: groove}
+p.ridge {outline-style: ridge}
+p.inset {outline-style: inset}
+p.outset {outline-style: outset}
+</style>
+	</head>
+	<body>
+<pre>
+outline属性规定元素轮廓的样式、颜色和宽度
+
+定义点状的轮廓
+<p class="dotted">A dotted outline</p>
+定义虚线轮廓
+<p class="dashed">A dashed outline</p>
+定义实线轮廓
+<p class="solid">A solid outline</p>
+定义双线轮廓。双线宽度等同于outline-width的值
+<p class="double">A double outline</p>
+定义3D凹槽轮廓。效果取决于 outline-color 值
+<p class="groove">A groove outline</p>
+定于3D凸槽轮廓。效果取决于 outline-color 值
+<p class="ridge">A ridge outline</p>
+定义3D凹边轮廓。效果取决于 outline-color 值
+<p class="inset">An inset outline</p>
+定义3D凸边轮廓。效果取决于 outline-color 值
+<p class="outset">An outset outline</p>
+
+<p><b>注释：</b>只有在规定了 !DOCTYPE 时，Internet Explorer 8 （以及更高版本） 才支持 outline-style 属性。</p>
+
+
+inherit 规定应该从父元素继承轮廓样式的设置
+</pre>
+
+<h1>CSS 盒模型</h1>
+<img src="http://www.w3school.com.cn/i/ct_boxmodel.gif" />
+	</body>
+</html>
