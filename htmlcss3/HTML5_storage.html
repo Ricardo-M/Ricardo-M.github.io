@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML5 web存储</title>
+  <style>
+    body{width: 800px;margin: 0 auto;}
+  </style>
+</head>
+
+<body>
+<pre>
+<h1>HTML5 提供了两种在客户端存储数据的新方法：</h1> 
+localStorage        没有时间限制的数据存储 
+sessionStorage      针对一个 session 的数据存储
+
+<h3>
+localStorage 方法
+localStorage 方法存储的数据没有时间限制
+</h3>
+<script type="text/javascript">
+if (localStorage.pagecount) {
+  localStorage.pagecount = Number(localStorage.pagecount) + 1;
+} else {
+  localStorage.pagecount = 1;
+}
+document.write("这是你第 " + localStorage.pagecount + " 访问.");
+</script>
+</pre>
+<pre>
+<h3>
+sessionStorage 方法
+sessionStorage 方法针对一个 session 进行数据存储。当用户关闭浏览器窗口后，数据会被删除
+</h3>
+
+<script type="text/javascript">
+if (sessionStorage.pagecount){
+  sessionStorage.pagecount=Number(sessionStorage.pagecount) +1;
+  }else{
+  sessionStorage.pagecount=1;
+  }
+document.write("Visits " + sessionStorage.pagecount + " time(s) this session.");
+</script> 
+</pre>
+</body>
+
+</html>
