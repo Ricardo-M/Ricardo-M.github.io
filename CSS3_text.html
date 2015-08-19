@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css3文本属性</title>
+		<style>
+		  body{width: 800px;margin: 0 auto;}
+		  h1{text-shadow: 5px 5px 5px #FF0000;}
+		  div.test{
+        white-space:nowrap; 
+        width:12em; 
+        overflow:hidden; 
+        border:1px solid #000000;
+        }
+		</style>
+	</head>
+	<body>
+<pre>
+<h1>文本阴影效果！</h1>
+
+单行文本长度过长，强行换行
+p {word-wrap:break-word;}
+text-wrap
+word-break
+
+齐行改变单词间的间隔<b>（仅IE支持该效果）</b>
+div{
+text-align:justify;
+text-justify:inter-word;
+}
+
+text-overflow 属性  文本溢出时会被修剪
+div.test{text-overflow:ellipsis;}
+<p>这个 div 使用 "text-overflow:ellipsis" ：</p>
+<div class="test" style="text-overflow:ellipsis;">This is some long text that will not fit in the box</div>
+<p>这个 div 使用 "text-overflow:clip"：</p>
+<div class="test" style="text-overflow:clip;">This is some long text that will not fit in the box</div>
+
+</pre>
+	</body>
+</html>

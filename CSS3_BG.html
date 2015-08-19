@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>css3背景设置</title>
+    <style>
+      body{width: 800px;margin: 0 auto;}
+    		.bg-size{
+    		  width: 100px;height: 100px;
+        background: url(test_img.jpg);
+        -moz-background-size:100px 100px; /* 老版本的 Firefox */
+        background-size:100px 100px;
+        background-repeat:no-repeat;
+        }
+        .bg_two {
+        width: 100px;height: 100px;
+        background-image: url(http://www.w3school.com.cn/i/bg_flower.gif), url(http://www.w3school.com.cn/i/bg_flower_2.gif);
+        -moz-background-size: 100px 100px; /* 老版本的 Firefox */
+        background-size: 100px 100px;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+
+<body>
+<pre>
+background-size属性  调整图片大小
+示例：
+<div class="bg-size"></div>
+<div><img src="test_img.jpg" /></div>
+
+background-origin属性   规定背景图片的定位区域
+背景图片可以放置于 content-box、padding-box 或 border-box 区域
+<img src="http://www.w3school.com.cn/i/background-origin.gif" />
+
+CSS3 多重背景图片
+
+<div class="bg_two"></div>
+
+background-clip属性    规定背景绘制区域
+div{
+background-color:yellow;
+background-clip:content-box;
+}
+
+</pre>
+</body>
+
+</html>
