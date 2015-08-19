@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS相邻兄弟选择器</title>
+		<style type="text/css">
+		body{width: 800px;margin: 0 auto;}
+      h1 + p {margin-top:50px;}
+      li + li {font-weight:bold;color:red;}
+    </style>
+	</head>
+	<body>
+<pre>
+示例：
+<b>增加紧接在 h1 元素后出现的段落的上边距</b>
+h1 + p {margin-top:50px;}
+
+<h1>This is a heading.</h1>
+<p>This is paragraph.</p>
+<p>This is paragraph.</p>
+
+<b>用一个结合符只能选择两个相邻兄弟中的第二个元素</b>
+
+<div>
+  <ul>
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+  </ul>
+  <ol>
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+  </ol>
+</div>
+
+<b>相邻兄弟结合符还可以结合其他结合符:</b>
+html > body table + ul {margin-top:20px;}
+
+选择紧接在 table 元素后出现的所有兄弟 ul 元素，该 table 元素包含在一个 body 元素中，body 元素本身是 html 元素的子元素。
+</pre>
+	</body>
+</html>

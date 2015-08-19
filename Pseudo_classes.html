@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Pseudo-classes伪类</title>
+		<style>
+		  body{width: 800px;margin: 0 auto;}
+      input:focus{background-color:yellow;}
+      p:first-child {font-weight: bold;color:red;}
+      li:first-child {text-transform:uppercase;color:red;}
+      q:lang(no){quotes: "~" "~"}
+    </style>
+		
+	</head>
+	<body>
+<pre>
+示例：
+focus 伪类（无法在 IE 中工作）
+<input type="text" />
+
+示例：
+first-child 伪类的用法
+<div>
+<p>These are the necessary steps:</p>
+<ul>
+<li>Intert Key</li>
+<li>Turn key <strong>clockwise</strong></li>
+<li>Push accelerator</li>
+</ul>
+<p>Do <em>not</em> push the brake at the same time as the accelerator.</p>
+</div>
+<p><b>注释：</b>必须声明 DOCTYPE，这样 :first-child 才能在 IE 中生效。</p>
+
+示例：
+lang 伪类的用法
+<p>:lang 伪类允许您为不同的语言定义特殊的规则。在下面的例子中，在下面的例子中，:lang 类为带有值为 "no" 的 lang 属性的 q 元素定义引号的类型：</p>
+<p>一些文本 <q lang="no">段落中的引用</q> 一些文本。</p>
+</pre>
+
+<pre>
+<h1>CSS 伪元素 (Pseudo-elements)</h1>
+:first-letter    向文本第一个字母添加特殊样式
+:first-line      向文本首行添加特殊样式
+:bofore          在元素之前添加内容
+:after           在元素之后添加内容
+
+<b>示例：多重伪类元素结合</b>
+段落的第一个字母将显示为红色，其字体大小为 xx-large。
+第一行中的其余文本将为蓝色，并以小型大写字母显示。
+段落中的其余文本将以默认字体大小和颜色来显示
+p:first-letter{color:#ff0000;font-size:xx-large;}
+p:first-line{color:#0000ff;font-variant:small-caps;}
+
+<p>You can combine the :first-letter and :first-line pseudo-elements to add a special effect to the first letter and the first line of a text!</p>
+</pre>
+
+	</body>
+</html>
