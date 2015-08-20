@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>javascript条件运算符</title>
+	</head>
+	<body>
+
+<pre>
+  语法：
+  variablename=(condition)?value1:value2
+</pre>
+<pre>
+  示例1：
+  greeting=(visitor=="PRES")?"Dear President ":"Dear ";
+  如果变量 visitor 中的值是 "PRES"，则向变量 greeting 赋值 "Dear President "，否则赋值 "Dear"。
+  
+  示例2：
+  voteable=(age<18)?"年龄太小":"年龄已达到"; 
+  如果变量 age 中的值小于 18，则向变量 voteable 赋值 "年龄太小"，否则赋值 "年龄已达到"。
+</pre>
+
+输入值：
+<input id="age" />
+<p>数值是否达到标准</p>
+<button onclick="myjs()">快点我</button>
+<p id="demo"></p>
+
+<script>
+  function myjs(){
+    var age,num;
+    age=document.getElementById("age").value;
+    num=(age<18)?"没有达到要求":"已达标，快来";
+    document.getElementById("demo").innerHTML=num;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</body>
+</html>
