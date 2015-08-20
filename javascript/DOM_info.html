@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>javascript HTML_DOM简介</title>
+	</head>
+	<body>
+<h1>通过类名查找 HTML 元素在 IE 5,6,7,8 中无效</h1>
+
+
+<div id="main" style="display: none;">
+<p>第一个目标元素</p>
+<p>本例演示 <b>getElementsByTagName</b> 方法。</p>
+</div>
+
+<script>
+var x=document.getElementById("main");
+var y=x.getElementsByTagName("p");
+document.write('id 为 "main" 的 div 中的第一段文本是：' + y[0].innerHTML);
+</script>
+
+	</body>
+</html>
