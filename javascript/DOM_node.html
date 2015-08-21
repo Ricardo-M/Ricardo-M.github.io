@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>javascript DOM节点</title>
+<style>
+  body{width: 800px;margin: 100px auto;}
+  b{color: red;font-size: 20px;}
+</style>
+</head>
+<body>
+  <pre>
+<b>创建添加新的HTML元素节点</b>
+<div id="div1">
+	<p class="p1">这是原本第一段落</p>
+	<p class="p2">这是原本第二段落</p>
+</div>
+<script>
+//创建新的<b>元素
+  var para=document.createElement("b");
+  //创建新的文本节点，向<b>元素中添加内容
+  var node=document.createTextNode("这是新创建的文本。");
+  //向<b>元素追加文本节点
+  para.appendChild(node);
+  //寻找文档中已存在元素，向已有元素追加新元素
+  var element=document.getElementById("div1");
+  //向已有元素追加元素
+  element.appendChild(para);
+</script>
+
+<b>删除已有的 HTML 元素</b>
+<div id="div2">
+	<p id="p3">这一段文本将被删除</p>
+	<p id="p4">这一段文本会保留下来</p>
+</div>
+<script>
+//var parent=document.getElementById("div2");
+//var child=document.getElementById("p3");
+//parent.removeChild(child);
+
+//找到希望删除的子元素，然后使用其 parentNode 属性来找到父元素
+var child=document.getElementById("p3");
+child.parentNode.removeChild(child);
+
+
+</script>
+
+</pre>
+
+
+
+
+
+
+
+
+	</body>
+</html>
