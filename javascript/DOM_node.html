@@ -34,6 +34,7 @@
 	<p id="p4">这一段文本会保留下来</p>
 </div>
 <script>
+//从父元素出发
 //var parent=document.getElementById("div2");
 //var child=document.getElementById("p3");
 //parent.removeChild(child);
@@ -41,18 +42,7 @@
 //找到希望删除的子元素，然后使用其 parentNode 属性来找到父元素
 var child=document.getElementById("p3");
 child.parentNode.removeChild(child);
-
-
 </script>
-
 </pre>
-
-
-
-
-
-
-
-
 	</body>
 </html>
