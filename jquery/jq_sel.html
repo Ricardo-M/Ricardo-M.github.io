@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jquery_selector</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	</head>
+	<body>
+	<!--利用jq定义背景样式-->
+<!--<script>
+  $(document.body).css('background','coral');
+</script>-->
+<!--点击影藏元素-->
+
+<!--点击隐藏元素-->
+<pre>
+<h3>我不会被隐藏</h3>
+<span>这里会被隐藏</span>
+<span>这里会被隐藏</span>
+<span>这里会被隐藏</span>
+<span>这里会被隐藏</span>
+<button>点我隐藏P元素</button>
+<script>
+  $("button").click(function(){
+    $("span").hide();
+  });
+</script>
+</pre>
+	</body>
+</html>
