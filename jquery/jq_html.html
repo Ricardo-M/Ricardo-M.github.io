@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jquery动态添加DOM元素</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	</head>
+
+	<body>
+<pre>
+append() - 在被选元素的结尾插入内容
+prepend() - 在被选元素的开头插入内容
+after() - 在被选元素之后插入内容
+before() - 在被选元素之前插入内容
+</pre>
+
+<pre>
+	  <!--利用jq创建文本-->
+<!--<span>我是本身存在的文本</span>
+  <script>
+  $("span").append("<div><p>我是由jq创建的</p></div>")
+</script>
+</pre>-->
+
+
+<pre>
+<script>
+function appendText()
+{
+var txt1="<p>Text.</p>";              // 以 HTML 创建新元素
+var txt2=$("<p></p>").text("Text.");  // 以 jQuery 创建新元素
+var txt3=document.createElement("p");
+txt3.innerHTML="Text.";               // 通过 DOM 来创建文本
+$("body").append(txt1,txt2,txt3);        // 追加新元素
+}
+</script>
+
+<p>这是原本存在的文本</p>
+<button onclick="appendText()">追加文本</button>
+</pre>
+
+	</body>
+</html>
