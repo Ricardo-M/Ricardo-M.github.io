@@ -3,7 +3,50 @@
 <head>
 <meta charset="utf-8">
 <title>CSS布局-水平垂直居中</title>
+
+<style type="text/css">
+pre{width: 1000px;margin: 100px auto;}
+.m-demo {
+margin: 0 auto;
+width: 500px;
+height: 500px;
+border: 1px solid #000000;
+}
+
+.m-demo div {
+width: 200px;
+height: 200px;
+border: 1px solid #FF0000;
+}
+
+.g-BothCtr-3 {
+/*对包含元素浮动的情况不适用，IE6、7不兼容*/
+display: table-cell;
+text-align: center;
+vertical-align: middle;
+}
+
+.g-BothCtr-3 .cnt {
+vertical-align: middle;
+display: inline-block;
+}
+</style>
 </head>
 <body>
+  <pre>
+    <h1>存在适配问题，使用时存在问题，样式无法被识别</h1>
+  </pre>
+  
+<div class="m-demo g-BothCtr-3">
+<div class="cnt"></div>
+</div>
+
+<pre>
+扩展性：无论子元素还是父元素，元素宽高改变，子元素仍然居中
+由于display:table-cell的原因，IE6\7不兼容
+
+这种方法扩展性还可以，但是无论父元素还是子元素都不能浮动，如果父元素浮动，元素就只能水平居中，如果子元素浮动，则子元素按照浮动的方向走
+</pre>
+
 </body>
 </html>

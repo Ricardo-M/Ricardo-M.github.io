@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS布局-水平垂直居中</title>
+
+<style type="text/css">
+pre{width: 1000px;margin: 100px auto;display: none;}
+.m-demo {
+height: 300px; /*高度值不能少*/
+width: 300px; /*宽度值不能少*/
+border: 1px solid #000000;
+
+}
+
+.g-BothCtr-4 {
+display: table;
+position: relative;
+float: left; /*可不浮动，也可浮动*/
+}
+
+.g-BothCtr-4 .tableCell {
+display: table-cell;
+vertical-align: middle;
+text-align: center;
+*position: absolute;
+*top: 50%;
+*left: 50%;
+}
+
+.g-BothCtr-4 .cnt {
+
+vertical-align: center;
+
+display: inline-block;
+
+*position: relative;
+*top: -50%;
+*left: -50%;
+}
+
+/*需要注意的是，使用这种方法，如果你的居中元素是放在body中的话，你需要给html,body设置一个“height:100%”的属性。*/
+</style>
+</head>
+<body>
+<div class="m-demo g-BothCtr-4">
+<div class="tableCell">
+<div class="cnt">content</div>
+</div>
+</div>
+<pre>
+兼容性：兼容IE6
+
+扩展性：无论子元素还是父元素，高苦都可扩展
+
+这种方法比上一种方法多了一个模拟table的盒子div，上面那个直接就是table-cell，因此这个是支持最外层父元素的浮动的。
+
+这个的实现原理呢，是让最外层的元素一个display:table模拟表格，然后让内容元素的直接父元素也就是最外层父元素的下一级一个display:table-cell，让它模拟表格单元格的行为，结合text-align:center和vertical-align:middle结合子元素display:inline-block让它的子元素也就是内容元素水平垂直居中，然后IE6\7不支持table-cell怎么办呢，方法就是针对IE6\7给内容元素的直接父元素一个position:absolute，left:50%，top：50%，让它相对于最外层父元素绝对定位水平和垂直偏移50%，这个时候它的左边就和父元素的垂直基线对齐了，然后再给内容元素以position:relative，left：-50%，top：-50%；让内容元素相对于它的直接父元素往左和往上分别偏移它的直接父元素一半的距离，这个时候内容元素也就相对于最外层父元素居中了。
+
+为什么一共需要三层标签，其一是构建table和table-cell的需要。其二，为了能够更好的在IE6\7上利用上述定位的原理进行居中。
+</pre>
+
+</body>
+</html>

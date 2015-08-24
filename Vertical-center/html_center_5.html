@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS布局-水平垂直居中</title>
+
+<style type="text/css">
+.m-demo {
+margin: 50px;
+width: 600px;
+height: 600px;
+border: 1px solid #000000;
+}
+
+.m-demo .secont {
+width: 200px;
+height: 200px;
+background-color: #FF0000;
+}
+
+.g-horCtrHtml-1 {
+text-align: center;
+font-size: 0;
+letter-spacing: -0.307em;
+*letter-spacing: normal;
+*word-spacing: -1px;
+}
+
+.g-horCtrHtml-1 .empty {
+width: 100%;
+height: 50%;
+margin-bottom: -100px; /*配置参数，内容元素高度的一半*/
+}
+
+.g-horCtrHtml-1 .cnt {
+
+display: inline-block;
+*letter-spacing: normal;
+
+*word-spacing: normal;
+*display: inline;
+*zoom: 1;
+}
+</style>
+</head>
+<body>
+<div class="m-demo g-horCtrHtml-1">
+<div class="empty"><!--空的内容--></div>
+<div class="secont cnt">实际内容</div>
+</div>
+<pre>
+兼容性：包括IE6在内的主流浏览器都兼容
+扩展性：高宽都不可扩展
+
+这种方法虽然多了一层标签，但是兼容性好，项目中如果需要兼容IE6\7，可以考虑使用此方法
+</pre>
+
+</body>
+</html>
