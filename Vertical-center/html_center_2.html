@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS布局-水平垂直居中</title>
+</head>
+<body>
+
+<style type="text/css">
+pre{width: 1000px;margin: 100px auto;}
+.m-demo {
+margin: 100px auto;
+width: 500px;
+height: 500px;
+border: 1px solid #000000;
+}
+
+.m-demo div {
+width: 200px;
+height: 200px;
+border: 1px solid #FF0000;
+}
+
+.g-BothCtr-2 {
+text-align: center;
+font-size: 0;
+letter-spacing: -0.307em;
+}
+
+.g-BothCtr-2:before, .g-BothCtr-2 .cnt {
+vertical-align: middle;
+display: inline-block;
+}
+
+.g-BothCtr-2 .cnt {
+letter-spacing: normal;
+}
+
+.g-BothCtr-2:before {
+content: '';
+width: 0;
+height: 100%;
+}
+</style>
+</head>
+<body>
+<pre>
+/*IE6、7不支持content属性*/
+扩展性：无论子元素还是父元素，元素宽高改变，子元素仍然居中
+兼容性：主流浏览器均支持，IE6不支持
+
+这种方法的缺点是子元素必须要是inline-block或者inline的元素，不能改变它的display：inline-block，也就是说子元素不能绝对定位，浮动，display设置为block
+</pre>
+
+<div class="m-demo g-BothCtr-2">
+<div class="cnt"></div>
+
+</body>
+</html>

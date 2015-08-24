@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS布局-水平垂直居中</title>
+</head>
+<body>
+
+<style type="text/css">
+pre{width: 1000px; margin: 10px auto}
+.m-demo {
+margin: 100px auto;
+width: 500px;
+height: 500px;
+border: 1px solid #000000;
+}
+
+.m-demo div {
+width: 200px;
+height: 200px;
+border: 1px solid #FF0000;
+}
+
+.g-BothCtr-1 {
+position: relative;
+}
+
+.g-BothCtr-1 .cnt {
+margin: auto;
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+}
+</style>
+</head>
+<body>
+<div class="m-demo g-BothCtr-1">
+<div class="cnt"></div>
+</div>
+
+<pre>
+如果想让内容块在贴近侧边的过程中保持水平居中，可以使用right: 0; left: auto; 让内容贴在右侧，或者使用left: 0; right: auto; 使内容贴在左侧。top和bottom同理
+扩展性：父元素宽高改变，子元素仍然居中，但是子元素只能固定宽高
+兼容性：主流浏览器均支持，IE6不支持
+
+这种对子元素水平垂直居中的方法兼容性很好，但是缺点是其一它需要让父元素相对定位才行，其二子元素必须为固定宽高
+  
+</pre>
+
+</body>
+</html>
