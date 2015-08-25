@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<title>轮播图</title>
+<style>
+  #show-box{
+    width: 500px;height: 400px;overflow: hidden;margin: 50px auto;
+  }
+  #show-box ul{
+    height: 400px;margin: 0;padding: 0;
+  }
+  #show-box ul li{
+    float: left;width: 500px;list-style-type: none;
+  }
+</style>
+</head>
+<body>
+<div id="show-box">
+<ul>
+<li><img src="images/Group-bg-0.jpg" /></li>
+<li><img src="images/Group-bg-1.jpg" /></li>
+<li><img src="images/Group-bg-2.jpg" /></li>
+<li><img src="images/Group-bg-3.jpg" /></li>
+<li><img src="images/Group-bg-4.jpg" /></li>
+<li><img src="images/Group-bg-5.jpg" /></li>
+<li><img src="images/Group-bg-6.jpg" /></li>
+</ul>
+</div>
+<script>
+$(function(){
+  var $show_box = $("#show-box").find("li");
+  $show_box.hide();
+  var pagenum = 0;
+  function showhide(){
+    var img_length = $show_box.length;
+    //判断当pagenum等于1的时候增加1
+    if(pagenum >= 0 && pagenum < img_length){
+      pagenum = pagenum+1 ;
+      $show_box.eq(pagenum-2).hide();
+      $show_box.eq(pagenum-1).show();
+      console.log(pagenum)
+    }
+    //判断当pagenum等于最大图片的时候显示第一张图片
+    if(pagenum == img_length){
+      pagenum = 1;
+      $show_box.eq(0).show();
+    }
+  }
+    setInterval(showhide,1000);
+});
+</script>
+</body>
+</html>
