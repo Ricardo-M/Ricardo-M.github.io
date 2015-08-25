@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>简单jq轮播效果</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+<style>
+  #focus {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    /*用一个div把图片包含设置超出范围隐藏*/
+  }
+</style>
+<div id="focus">
+  <img src="images/Group-bg-0.jpg" height="500px" />
+  <img src="images/Group-bg-1.jpg" height="500px" />
+  <img src="images/Group-bg-2.jpg" height="500px" />
+  <img src="images/Group-bg-3.jpg" height="500px" />
+  <img src="images/Group-bg-4.jpg" height="500px" />
+  <img src="images/Group-bg-5.jpg" height="500px" />
+  <img src="images/Group-bg-6.jpg" height="500px" />
+  <img src="images/Group-bg-7.jpg" height="500px" />
+  <img src="images/Group-bg-8.jpg" height="500px" />
+  <img src="images/Group-bg-9.jpg" height="500px" />
+</div>
+
+</body>
+<script>
+ //将script写在最底部避免js阻塞页面加载
+var index = 0; //当前显示的第几张图，默认开始为0；
+var msg = $("#focus img"); //将焦点图储存为一个变量方便调用节省下载调用查询时间。
+var len = msg.length; //焦点图图片数量
+function play(n) {
+  msg.eq(n).fadeIn(200).siblings("img").fadeOut(200);
+  //eq表示第几个标签里面的n就是代表的第几个img标签是从0开始数的。
+}
+setInterval(function() {
+  play(index);
+  index++;
+  if (index == len) { 
+    //当当前播放的索引值等于总图片数就重置为0，重新开始循环
+    index = 0;
+  }
+}, 2000); 
+//将function写在setInterval里更简洁。这样写默认开始2秒就开始播放，如果想开始2秒就播放第二张，那就得把最前面的index=1;
+//  因为初始显示的就是第一张。所以2秒后应该显示第二张而不是还是第一张
+</script>
+
+</html>
