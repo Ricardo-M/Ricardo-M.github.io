@@ -1,0 +1,58 @@
+.box {
+  width: 100%;
+  height: 500px;
+  border: solid 1px #CCC;
+  padding: 5px;
+}
+.box .box1 {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+.box .box1 .picbox {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  display: none;
+}
+.box .box1 .picbox .shadow {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background: #666;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.box .box1 .picbox .title {
+  margin: 0;
+  padding: 0;
+  width: 350px;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  text-indent: 0.5em;
+  color: #FFF;
+}
+.box1 .picbtn {
+  width: 200px;
+  height: 30px;
+  position: absolute;
+  right: 10%;
+  bottom: -8px;
+}
+.box1 .picbtn a {
+  width: 25px;
+  height: 12px;
+  display: block;
+  float: left;
+  margin-right: 5px;
+  background-color: #50f0d8;
+}
+.box1 .picbtn a.act {
+  background-color: #FFF;
+}

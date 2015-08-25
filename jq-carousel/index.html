@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link rel="stylesheet" href="style/base.css" />
+</head>
+<body>
+<div class="box" id="box">
+  <div class="box1">
+    <div class="picbox" style="display:block;"> <img src="images/Group-bg-0.jpg" />
+      <div class="shadow"></div>
+      <p class="title">图片一</p>
+    </div>
+    <div class="picbox"> <img src="images/Group-bg-1.jpg" />
+      <div class="shadow"></div>
+      <p class="title">图片二</p>
+    </div>
+    <div class="picbox"> <img src="images/Group-bg-2.jpg" />
+      <div class="shadow"></div>
+      <p class="title">图片三</p>
+    </div>
+    <div class="picbox"> <img src="images/Group-bg-3.jpg" />
+      <div class="shadow"></div>
+      <p class="title">图片四</p>
+    </div>
+    <div class="picbox"> <img src="images/Group-bg-4.jpg" />
+      <div class="shadow"></div>
+      <p class="title">图片五</p>
+    </div>
+    <div class="picbox"> <img src="images/Group-bg-9.jpg" />
+      <div class="shadow"></div>
+      <p class="title">图片五</p>
+    </div>
+    <div class="picbtn" id="btn">
+      <a href="javascript:void(0)" class="act"></a>
+      <a href="javascript:void(0)"></a>
+      <a href="javascript:void(0)"></a>
+      <a href="javascript:void(0)"></a>
+      <a href="javascript:void(0)"></a>
+      <a href="javascript:void(0)"></a>
+    </div>
+  </div>
+</div>
+</body>
+
+<script>
+window.onload = function() {
+var oBox = document.getElementById('box');
+var oBtn = document.getElementById('btn');
+var aBtn = oBtn.getElementsByTagName('a'); 
+//alert(aBtn.length);
+var aPicText = getByclass('picbox', oBox);      
+for (var i = 0; i < aBtn.length; i++) {       
+  aBtn[i].index = i;        
+  //先隐藏全部，在单独显示选中的        
+  aBtn[i].onmouseover = function() {          
+    for (var n = 0; n < aBtn.length; n++) {           
+      aPicText[n].style.display = "none";           
+      aBtn[n].className = '';         
+    }         
+    aPicText[this.index].style.display = "block"          
+    this.className = 'act';       
+  }     
+}    
+//得到class为picBox的div      
+function getByclass(sName, oParent) {       
+  var obj = oParent.getElementsByTagName('*');        
+  var result = [];        
+  for (var i = 0; i < obj.length; i++) {          
+    if (obj[i].className == sName) {            
+      result.push(obj[i]);          
+    }       
+  }       
+  return result;      
+}   
+}
+</script>
+
+</html>
