@@ -12,7 +12,7 @@
     width: 2000px;height: 400px;margin: 0;padding: 0;
   }
   #show-box ul li{
-    float: left;width: 500px;list-style-type: none;
+    float: left;width: 500px;list-style-type: none;display: none;
   }
 </style>
 </head>
@@ -31,28 +31,21 @@
 <script>
 $(function(){
 	var $show_box = $("#show-box").find("li");
-	$show_box.hide();
 	var pagenum = 0;
-	function showhide(pagenum){
-		var img_length = $show_box.length;
-		//判断当pagenum等于1的时候增加1
-		if(pagenum >= 0 && pagenum <= img_length){
-			$show_box.eq(pagenum-2).hide();
-			$show_box.eq(pagenum-1).show();
-			console.log(pagenum)
-		}
-		//判断当pagenum等于最大图片的时候显示第一张图片
-		if(pagenum > img_length){
-			pagenum = 1;
-			$show_box.eq(0).show();
-		}
+	var img_length = $show_box.length;
+	function showhide(page){
+	  pagenum= page;
+	  $show_box.hide();
+		$show_box.eq(pagenum).css('display','block');
 	}
-	
+	showhide(pagenum);
 	var Num_show = function(){
-		showhide(pagenum);
-	 	pagenum  = ++pagenum;
+		if(pagenum > img_length -1){
+		  pagenum = 0
+		}
+	 	++pagenum;
+	 	showhide(pagenum);
 	}
-	
 	setInterval(Num_show,1000);
 });
 </script>
