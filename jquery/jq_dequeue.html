@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="jquery-1.9.1.min.js" ></script>
+	</head>
+	<body>
+
+从队列最前端移除一个队列函数，并执行他
+<pre>
+使用dequeue()终止一个自定义的队列函数
+
+<style>
+  div{margin:93px 0;width: 50px;height:50px;position: absolute;left: 10px;top: 30px;background-color: blue;}
+  div.red{background-color: deepskyblue;}
+</style>
+<button>Start</button>
+<div></div>
+
+<script>
+  $("button").click(function(){
+    $("div").animate({left:'+=200px'},2000);
+    $("div").animate({top:'0px'},600);
+    $("div").queue(function(){
+      $(this).toggleClass("red");
+      $(this).dequeue();
+    });
+    $("div").animate({left:"10px",top:"30px"},700);
+  });
+</script>
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</body>
+</html>
